@@ -6,7 +6,7 @@ sealed class SimillerMoviesState {}
 final class SimillerMoviesInitial extends SimillerMoviesState {}
 final class SimillerMoviesLoading extends SimillerMoviesState {}
 final class SimillerMoviesSuccess extends SimillerMoviesState {
-   final List<MoviesListEntity>movies;
+   final List<MovieEntity>movies;
 
   SimillerMoviesSuccess({required this.movies});
 }

@@ -1,4 +1,4 @@
-class MoviesListEntity {
+class MovieEntity {
   final String? image;
   final int? id;
   final String? name;
@@ -6,7 +6,7 @@ class MoviesListEntity {
   final num? poularity;
   final num? voteCountRate;
 
-  MoviesListEntity(
+  MovieEntity(
       {required this.name,
       required this.overview,
       required this.poularity,
@@ -14,8 +14,8 @@ class MoviesListEntity {
       required this.id,
       required this.image});
 
-  factory MoviesListEntity.fromJson(data) {
-    return MoviesListEntity(
+  factory MovieEntity.fromJson(data) {
+    return MovieEntity(
       id: data["id"],
       image: data["poster_path"],
       name: data["title"],

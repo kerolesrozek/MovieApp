@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:moviesapp/core/styles.dart';
 import 'package:moviesapp/features/movie_deatails/presentation/views/widgets/movie_actors_list_builder.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 
 class MovieDataSession extends StatelessWidget {
   const MovieDataSession({super.key, required this.movie});
-  final MoviesListEntity movie;
+  final MovieEntity movie;
   @override
   Widget build(BuildContext context) {
     return SliverList(

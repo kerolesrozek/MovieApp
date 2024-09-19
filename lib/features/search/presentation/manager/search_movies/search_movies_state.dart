@@ -6,7 +6,7 @@ sealed class SearchMoviesState {}
 final class SearchMoviesInitial extends SearchMoviesState {}
 final class SearchMoviesLoading extends SearchMoviesState {}
 final class SearchMoviesSuccess extends SearchMoviesState {
-  final List<MoviesListEntity>movies;
+  final List<MovieEntity>movies;
 
   SearchMoviesSuccess({required this.movies});
 }

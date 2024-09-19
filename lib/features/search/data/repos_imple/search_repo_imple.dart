@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:moviesapp/core/errors/failure_errors.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 import 'package:moviesapp/features/search/data/data_sources/searched_movies_remote_data_source.dart';
 import 'package:moviesapp/features/search/domain/search_repos/search_repo.dart';
 
@@ -10,10 +10,10 @@ class SearchRepoImple extends SearchRepo {
 
   SearchRepoImple({required this.searchedMoviesRemoteDataSource});
   @override
-  Future<Either<Failure, List<MoviesListEntity>>> fetchMoviesBySearch(
+  Future<Either<Failure, List<MovieEntity>>> fetchMoviesBySearch(
       {required String searchValue}) async {
     try {
-      List<MoviesListEntity> results = await searchedMoviesRemoteDataSource
+      List<MovieEntity> results = await searchedMoviesRemoteDataSource
           .getSearchedMovies(movieValue: searchValue);
       return right(results);
     } catch (e) {

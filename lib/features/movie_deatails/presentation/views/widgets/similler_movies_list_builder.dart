@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moviesapp/features/movies_feature/presentation/views/widgets/shimmer_loading_widget.dart';
 import 'package:moviesapp/features/movie_deatails/presentation/manager/similler_movies_cubit/similler_movies_cubit.dart';
 import 'package:moviesapp/features/movie_deatails/presentation/views/widgets/similler_movies_list.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 
 class SimillerMoviesListBuilder extends StatelessWidget {
   const SimillerMoviesListBuilder({
@@ -11,7 +11,7 @@ class SimillerMoviesListBuilder extends StatelessWidget {
     required this.movie,
   });
 
-  final MoviesListEntity? movie;
+  final MovieEntity? movie;
 
   @override
   Widget build(BuildContext context) {

@@ -2,14 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:moviesapp/core/approutes.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 
 class CustomMovieImage extends StatelessWidget {
   const CustomMovieImage({
     super.key,
     this.movie,
   });
-  final MoviesListEntity? movie;
+  final MovieEntity? movie;
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ sealed class UpcomingMoviesState {}
 final class UpcomingMoviesInitial extends UpcomingMoviesState {}
 final class UpcomingMoviesLoading extends UpcomingMoviesState {}
 final class UpcomingMoviesSuccess extends UpcomingMoviesState {
-  final List<MoviesListEntity>movies;
+  final List<MovieEntity>movies;
 
   UpcomingMoviesSuccess({required this.movies});
 }

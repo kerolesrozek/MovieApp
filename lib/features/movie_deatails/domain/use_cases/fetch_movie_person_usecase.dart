@@ -1,14 +1,17 @@
 import 'package:dartz/dartz.dart';
 import 'package:moviesapp/core/errors/failure_errors.dart';
 import 'package:moviesapp/features/movie_deatails/domain/entities/movie_person_entity.dart';
-import 'package:moviesapp/features/movie_deatails/domain/repos/movie_peson_repo.dart';
+import 'package:moviesapp/features/movie_deatails/domain/repos/movie_detail_repos.dart';
 
 class FetchMoviePersonUsecase {
-  final MoviePesonRepo moviePesonRepo;
+  
+final MovieDetailRepos movieDetailRepos;
 
-  FetchMoviePersonUsecase({required this.moviePesonRepo});
+  FetchMoviePersonUsecase({required this.movieDetailRepos});
+
+  
   Future<Either<Failure, List<MoviePersonEntity>>> call(
       {required int movieId}) {
-    return moviePesonRepo.fetchMoviePerson(movieId: movieId);
+    return movieDetailRepos.fetchMoviePerson(movieId: movieId);
   }
 }

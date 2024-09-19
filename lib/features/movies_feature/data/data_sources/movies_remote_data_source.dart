@@ -1,11 +1,11 @@
 import 'package:moviesapp/core/api_services/api_services.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 
 abstract class MoviesRemoteDataSource {
-  Future<List<MoviesListEntity>> getCurrentlyMovies();
-  Future<List<MoviesListEntity>> getPopularMovies();
-  Future<List<MoviesListEntity>> getTopRatedMovies();
-  Future<List<MoviesListEntity>> getUpComindMovies();
+  Future<List<MovieEntity>> getCurrentlyMovies();
+  Future<List<MovieEntity>> getPopularMovies();
+  Future<List<MovieEntity>> getTopRatedMovies();
+  Future<List<MovieEntity>> getUpComindMovies();
 }
 
 class MoviesRemoteDataSourceImplementation extends MoviesRemoteDataSource {
@@ -13,51 +13,51 @@ class MoviesRemoteDataSourceImplementation extends MoviesRemoteDataSource {
 
   MoviesRemoteDataSourceImplementation({required this.apiServices});
   @override
-  Future<List<MoviesListEntity>> getCurrentlyMovies() async {
+  Future<List<MovieEntity>> getCurrentlyMovies() async {
     Map<String, dynamic> jsonData =
         await apiServices.get(endpoin: 'movie/now_playing?');
-    List<MoviesListEntity> currentMovies = [];
+    List<MovieEntity> currentMovies = [];
     for (var element in jsonData["results"]) {
       currentMovies.add(
-        MoviesListEntity.fromJson(element),
+        MovieEntity.fromJson(element),
       );
     }
     return currentMovies;
   }
 
   @override
-  Future<List<MoviesListEntity>> getPopularMovies() async {
+  Future<List<MovieEntity>> getPopularMovies() async {
     Map<String, dynamic> jsonData = await apiServices.get(endpoin: 'movie/popular?');
-    List<MoviesListEntity> popularMovies = [];
+    List<MovieEntity> popularMovies = [];
     for (var element in jsonData["results"]) {
       popularMovies.add(
-        MoviesListEntity.fromJson(element),
+        MovieEntity.fromJson(element),
       );
     }
     return popularMovies;
   }
 
   @override
-  Future<List<MoviesListEntity>> getTopRatedMovies() async {
+  Future<List<MovieEntity>> getTopRatedMovies() async {
     Map<String, dynamic> jsonData =
         await apiServices.get(endpoin: 'movie/top_rated?');
-    List<MoviesListEntity> topRatedMovies = [];
+    List<MovieEntity> topRatedMovies = [];
     for (var element in jsonData["results"]) {
       topRatedMovies.add(
-        MoviesListEntity.fromJson(element),
+        MovieEntity.fromJson(element),
       );
     }
     return topRatedMovies;
   }
 
   @override
-  Future<List<MoviesListEntity>> getUpComindMovies() async {
+  Future<List<MovieEntity>> getUpComindMovies() async {
     Map<String, dynamic> jsonData =
         await apiServices.get(endpoin: 'movie/upcoming?');
-    List<MoviesListEntity> upcomingMovies = [];
+    List<MovieEntity> upcomingMovies = [];
     for (var element in jsonData["results"]) {
       upcomingMovies.add(
-        MoviesListEntity.fromJson(element),
+        MovieEntity.fromJson(element),
       );
     }
     return upcomingMovies;

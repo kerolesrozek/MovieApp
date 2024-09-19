@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 import 'package:moviesapp/features/movies_feature/presentation/views/widgets/custom_movie_image.dart';
 
 class SearchMoviesList extends StatelessWidget {
@@ -7,7 +7,7 @@ class SearchMoviesList extends StatelessWidget {
     super.key,
     required this.movies,
   });
-  final List<MoviesListEntity> movies;
+  final List<MovieEntity> movies;
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moviesapp/features/movie_deatails/domain/entities/movie_entity.dart';
+import 'package:moviesapp/features/movie_deatails/domain/entities/movie_video_entity.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class MovieVideo extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moviesapp/features/movie_deatails/domain/use_cases/fetch_simeller_movies_usecase.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 
 part 'similler_movies_state.dart';
 

@@ -1,6 +1,6 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 import 'package:moviesapp/features/movies_feature/domain/uscases/fetch_top_rated_movies_usecase.dart';
 
 part 'top_rated_state.dart';

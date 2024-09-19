@@ -8,14 +8,14 @@ import 'package:moviesapp/features/movie_deatails/presentation/manager/similler_
 import 'package:moviesapp/features/movie_deatails/presentation/views/widgets/movie_data_session.dart';
 import 'package:moviesapp/features/movie_deatails/presentation/views/widgets/movie_video_builder.dart';
 import 'package:moviesapp/features/movie_deatails/presentation/views/widgets/similler_movie_session.dart';
-import 'package:moviesapp/features/movies_feature/domain/entities/movies_list_entity.dart';
+import 'package:moviesapp/features/movies_feature/domain/entities/movie_entity.dart';
 
 class MovieDetailbody extends StatefulWidget {
   const MovieDetailbody({
     super.key,
     required this.movie,
   });
-  final MoviesListEntity movie;
+  final MovieEntity movie;
   @override
   State<MovieDetailbody> createState() => _MovieDetailbodyState();
 }
